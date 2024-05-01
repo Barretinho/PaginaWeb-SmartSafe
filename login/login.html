@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabeçalho e Divs</title>
+  <link rel="stylesheet" href="login.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <img src="../img/logo.png" alt="" class="logo">
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="box1">
+        <h1>Smart<span> Safe</span></h1>
+        <p>A segurança imediata na palma da sua mão!</p>
+        <a href="#"><button class="button">Baixe o nosso app</button></a>
+      </div>
+
+      <div class="box2">
+        <img src="../img/fundo.png" alt="" class="fundo">
+        <img src="../img/logo.png" alt="">
+        <h1>Login</h1>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <button type="submit" class="Button">Fazer Login</button>
+        </form>
+      </div>
+      
+    </div>
+  </section>
+
+  <div class="redes-sociais">
+    <a href="https://www.instagram.com/pepsibr/?hl=pt-br" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+    <a href="https://www.facebook.com/PepsiBrasil/?locale=pt_BR" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+  </div>
+
+  <script>
+    document.getElementById("Button").addEventListener("click", function(event) {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        // Verifica se ambos os campos estão preenchidos
+        if (email.trim() === "" || password.trim() === "") {
+            // Se um dos campos estiver vazio, impede o envio do formulário
+            event.preventDefault();
+            alert("Por favor, preencha todos os campos.");
+        }
+    });
+</script>
+
+</body>
+
+</html>
