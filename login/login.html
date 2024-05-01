@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cabeçalho e Divs</title>
+  <title>Login-Smart Safe</title>
   <link rel="stylesheet" href="login.css">
+  <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -37,7 +38,7 @@
             <label for="password">Senha:</label>
             <input type="password" id="password" name="password" required>
           </div>
-          <button type="submit" class="Button">Fazer Login</button>
+          <button type="submit" class="Button" onclick="enviar()">Fazer Login</button>
         </form>
       </div>
       
@@ -50,7 +51,7 @@
   </div>
 
   <script>
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
+    document.querySelector("#loginForm").addEventListener("submit", function(event) {
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
 
@@ -63,11 +64,16 @@
             // Simula o login bem-sucedido
             // Aqui você pode verificar as credenciais com um backend real
             // Se o login for bem-sucedido, redirecione o usuário para a página desejada
-            window.location.href = "../home/home.html";
-            console.log("você")
+            enviar();
         }
     });
+
+    function enviar() {
+        window.location.href = "../home/home.html";
+        console.log('deu certo')
+    }
 </script>
+
 
 </body>
 
