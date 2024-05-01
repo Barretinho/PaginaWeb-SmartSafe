@@ -29,7 +29,7 @@
         <img src="../img/fundo.png" alt="" class="fundo">
         <img src="../img/logo.png" alt="">
         <h1>Login</h1>
-        <form id="loginForm">
+        <form action="../home/home.html" id="loginForm">
           <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
@@ -38,7 +38,7 @@
             <label for="password">Senha:</label>
             <input type="password" id="password" name="password" required>
           </div>
-          <button type="submit" class="Button" onclick="enviar()">Fazer Login</button>
+          <button type="submit" class="Button">Fazer Login</button>
         </form>
       </div>
       
@@ -64,16 +64,11 @@
             // Simula o login bem-sucedido
             // Aqui você pode verificar as credenciais com um backend real
             // Se o login for bem-sucedido, redirecione o usuário para a página desejada
-            enviar();
+            window.location.href("/home/home.html");
+            console.log("você")
         }
     });
-
-    function enviar() {
-        window.location.href = "../home/home.html";
-        console.log('deu certo')
-    }
 </script>
-
 
 </body>
 
